@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Epiroc.Common.Math", "Epiroc.Common.Math\Epiroc.Common.Math.fsproj", "{9BF21BEC-9B28-471A-A9A0-93A6AAE8A441}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epiroc.Common.Math.Tests", "Epiroc.Common.Math.Tests\Epiroc.Common.Math.Tests.csproj", "{2C2F3BCC-A1A6-473C-9624-75B858C817CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BF21BEC-9B28-471A-A9A0-93A6AAE8A441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BF21BEC-9B28-471A-A9A0-93A6AAE8A441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BF21BEC-9B28-471A-A9A0-93A6AAE8A441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BF21BEC-9B28-471A-A9A0-93A6AAE8A441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C2F3BCC-A1A6-473C-9624-75B858C817CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C2F3BCC-A1A6-473C-9624-75B858C817CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C2F3BCC-A1A6-473C-9624-75B858C817CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C2F3BCC-A1A6-473C-9624-75B858C817CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {955782C2-0090-4CF7-B8D8-63A4CB048E27}
+	EndGlobalSection
+EndGlobal

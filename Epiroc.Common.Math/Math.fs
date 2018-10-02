@@ -42,7 +42,7 @@ type Point2D (x : float, y : float) =
     override __.ToString () = sprintf "(%g, %g)" x y
 
 module Point2D =
-    let internal create x y = Point2D (x, y)
+    let inline internal create x y = Point2D (x, y)
     let (|Point2D|) (point : Point2D) = (point.X, point.Y)
     let zero = create 0.0 0.0
     let subtract (Point2D (x1, y1)) (Point2D (x2, y2)) = Vector2D.create (x1 - x2) (y1 - y2)
@@ -59,6 +59,7 @@ type Line2D (p1 : Point2D, p2 : Point2D) =
     override __.ToString () = sprintf "(%A - %A)" p1 p2
 
 module Line2D =
+    let inline internal create l1 l2 = Line2D (l1, l2)
     let (|Line2D|) (l : Line2D) = (l.P1, l.P2)
     let length (Line2D (p1, p2)) = Point2D.subtract p1 p2 |> Vector2D.length
 

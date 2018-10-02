@@ -30,7 +30,7 @@ type Vector2D with
 
     static member (+) (v1, v2) = Vector2D.add v1 v2
     static member (-) (v1, v2) = Vector2D.subtract v1 v2
-    static member (*) (k, v) = Vector2D.scalarMultiply k v
+    static member (*) (k , v ) = Vector2D.scalarMultiply k v
 
     member v.Length () = Vector2D.length v
 
@@ -61,7 +61,25 @@ type Line2D (p1 : Point2D, p2 : Point2D) =
 module Line2D =
     let inline internal create l1 l2 = Line2D (l1, l2)
     let (|Line2D|) (l : Line2D) = (l.P1, l.P2)
-    let length (Line2D (p1, p2)) = Point2D.subtract p1 p2 |> Vector2D.length
+    let length (Line2D (p1, p2)) =
+        Point2D.subtract p1 p2 |> Vector2D.length
+
+    open Point2D
+
+    let length' (line : Line2D) =
+        let dx = line.P2.X - line.P1.X
+        let dy = line.P2.Y - line.P1.Y
+        sqrt (dx * dx + dy * dy)
+
+    let length'' (Line2D (point1, point2)) =
+        let dx = point2.X - point1.X
+        let dy = point2.Y - point1.Y
+        sqrt (dx * dx + dy * dy)
+
+    let length''' (Line2D (Point2D (x1, y1), Point2D (x2, y2))) =
+        let dx = x2 - x1
+        let dy = y2 - y1
+        sqrt (dx * dx + dy * dy)
 
 type Line2D with
-    member line.Length () = Line2D.length line
+    member line.Length () = Line2D.length' line

@@ -11,6 +11,8 @@ type Vector2D (x : float, y : float) =
 
 module Vector2D =
     let inline internal create x y = Vector2D (x, y)
+
+    // Deconstruction by means of an active pattern
     let (|Vector2D|) (v : Vector2D) = (v.X, v.Y)
 
     let zero  = create 0.0 0.0
